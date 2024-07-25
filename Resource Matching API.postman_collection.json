@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "d27f3be8-3c23-4589-91f2-eaa83ee39d31",
+		"name": "Resource Matching API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21907500"
+	},
+	"item": [
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Create Project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Project Alpha\"}"
+						},
+						"url": "{{base_url}}/api/projects"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/projects"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"project\": 1, \"name\": \"Task 1\", \"start_date\": \"2024-08-01\", \"end_date\": \"2024-08-10\"}"
+						},
+						"url": "{{base_url}}/api/tasks/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/tasks"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Skills",
+			"item": [
+				{
+					"name": "Create Skill",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Python\"}"
+						},
+						"url": "{{base_url}}/api/skills/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Skills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/skills"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resources",
+			"item": [
+				{
+					"name": "Create Resource",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Sarvesh\"}"
+						},
+						"url": "{{base_url}}/api/resources/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resources",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/resources"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resource Skills",
+			"item": [
+				{
+					"name": "Create Resource Skill",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"resource\": 1, \"skill\": 1}"
+						},
+						"url": "{{base_url}}/api/resource-skills/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resource Skills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/resource-skills"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resource Availability",
+			"item": [
+				{
+					"name": "Create Resource Availability",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"resource\": 1, \"start_date\": \"2024-08-01\", \"end_date\": \"2024-08-15\"}"
+						},
+						"url": "{{base_url}}/api/resource-availability/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resource Availability",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/resource-availability"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task Skills",
+			"item": [
+				{
+					"name": "Create Task Skill",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"task\": 1, \"skill\": 1}"
+						},
+						"url": "{{base_url}}/api/task-skills/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Task Skills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/task-skills"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Match Resources",
+			"item": [
+				{
+					"name": "Get Matching Resources",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/match-resources/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
