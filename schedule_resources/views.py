@@ -87,20 +87,3 @@ def match_resources_for_task(task_id):
         return []
 
     return matching_resources
-# def match_resources_for_task(task_id):
-#     task = Task.objects.get(id=task_id)
-#     task_skills = TaskSkill.objects.filter(task=task)
-#     required_skills = [task_skill.skill for task_skill in task_skills]
-    
-#     matching_resources = []
-
-#     for resource in Resource.objects.all():
-#         resource_skills = ResourceSkill.objects.filter(resource=resource).values_list('skill', flat=True)
-#         if all(skill in resource_skills for skill in required_skills):
-#             availability_periods = ResourceAvailability.objects.filter(resource=resource)
-#             for period in availability_periods:
-#                 if period.start_date <= task.start_date and period.end_date >= task.end_date:
-#                     matching_resources.append(resource)
-#                     break
-
-#     return matching_resources
